@@ -11,7 +11,7 @@ const VALUE = 3;
  */
 function rollDice(formula) {
 
-  let splitre = /[+-]/g
+  let splitre = /[+-]/g;
 
   if (!formula) {
     throw new Error("Empty formula");
@@ -45,13 +45,19 @@ function rollDice(formula) {
   return total;
 }
 
+/**
+ * Processes a single roll clause, which may include a die spec or value
+ * @param {string} roll clause
+ * @return {number} the result of the clause
+ */
 function processClause(clause) {
-
-  let clausere = /(\d+)?d(\d+)|(\d+(?!.))/;
 
   if (!clause) {
     return 0;
   }
+
+  let clausere = /(\d+)?d(\d+)|(\d+(?!.))/;
+
   if (!clause.match(clausere)) {
     throw new Error("Bad clause: " + clause);
   }
@@ -69,6 +75,8 @@ function processClause(clause) {
   } else if (match[VALUE]) {
     let value = parseInt(match[VALUE]);
     subtotal += value;
+  } else {
+    throw new Error("Unhandled clause type: " + clause);
   }
 
   return subtotal;

@@ -1,8 +1,9 @@
 /**
 * Simple dice roller
 *  Provides an example of a simple app for rolling dice
-* Copyright 2017 - Mat Hunter
+*  Copyright 2017 - Mat Hunter
 */
+
 "use strict";
 
 // Constants
@@ -15,7 +16,7 @@ const path = require("path");
 const rollDice = require("./roll-dice");
 
 // Set up Express
-let app = express();
+const app = express();
 
 // Set up the middleware
 // - Logging
