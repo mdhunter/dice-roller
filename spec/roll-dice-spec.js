@@ -48,7 +48,7 @@ describe("roll dice", () => {
     }
   });
 
-  it("should roll a single die and subtract a value to it", () => {
+  it("should roll a single die and subtract a value from it", () => {
     for (let i = 0; i < 1000; i++) {
       var result = rollDice("d10-4");
       expect(result).toBeGreaterThan(-4);
