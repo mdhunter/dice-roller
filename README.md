@@ -7,6 +7,6 @@ While looking at potential new career opportunities, I noticed a goodly number t
 ## Installation
 Assuming NodeJS is already properly installed:
 
-1. npm install.
-2. npm start.
-3. Access localhost:3000
+1. Run `npm install` to pull down the necessary modules.
+1. Run `npm start` to start the server.
+1. Open your favorite web browser and point at `localhost:3000`.
